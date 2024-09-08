@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organización Sin Fines de Lucro - Promoción de Actividades y Eventos</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Estilos para la cabecera */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Menú de Navegación utilizando Flexbox */
+    nav {
+      background-color: #fff;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 5px 10px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+    }
+
+    /* Contenido principal */
+    main {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+
+    /* Secciones específicas */
+    .section-title {
+      text-align: center;
+      color: #333;
+    }
+
+    .section {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    /* Galería de imágenes */
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .image-gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Ajuste del contenido en diferentes dispositivos */
+    @media (min-width: 600px) {
+      main {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .section {
+        flex: 1 1 calc(50% - 40px);
+        margin: 10px;
+      }
+
+      .section.full-width {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      main {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .section {
+        flex: 1 1 calc(33.33% - 40px);
+        margin: 10px;
+      }
+
+      .section.full-width {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Media queries para dispositivos móviles */
+    @media (max-width: 599px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main {
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .section {
+        padding: 15px;
+        margin: 10px 0;
+      }
+
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-gallery img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    /* Estilos para la tabla de próximos eventos */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Estilos para el formulario */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label, form input {
+      margin-bottom: 10px;
+    }
+
+    form input[type="text"], form input[type="email"] {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    form input[type="submit"] {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    /* Estilos para las imágenes y videos */
+    .video-container {
+      text-align: center;
+    }
+
+    .video-container iframe {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Cabecera de la página -->
+<header>
+  <h1>Organización Sin Fines de Lucro</h1>
+</header>
+
+<!-- Menú de Navegación -->
+<nav>
+  <ul>
+    <li><a href="#quienes_somos">Quiénes Somos</a></li>
+    <li><a href="#actividades_realizadas">Actividades Realizadas</a></li>
+    <li><a href="#proximos_eventos">Próximos Eventos</a></li>
+    <li><a href="#temas_de_interes">Temas de Interés</a></li>
+    <li><a href="https://es.wikipedia.org/wiki/Cambio_clim%C3%A1tico" target="_blank">Cambio Climático en Wikipedia</a></li>
+  </ul>
+</nav>
+
+<!-- Contenido principal -->
+<main>
+  <section id="quienes_somos" class="section full-width">
+    <h2 class="section-title">Quiénes Somos</h2>
+    <p>Nuestra institución está dedicada a promover la conciencia y la participación comunitaria para hacer frente a una variedad de problemas sociales. Nos asociamos con voluntarios y residentes locales para impulsar transformaciones positivas y duraderas en nuestra comunidad.</p>
+  </section>
+
+  <section id="actividades_realizadas" class="section">
+    <h2 class="section-title">Actividades Realizadas</h2>
+    <ul>
+      <li>Impartimos charlas educativas sobre medio ambiente para concienciar y motivar a la comunidad a cuidar nuestro entorno.</li>
+      <li>Brindamos talleres para el crecimiento personal y social.</li>
+      <li>Realizamos eventos para recaudar fondos para causas benéficas.</li>
+    </ul>
+  </section>
+
+  <section id="proximos_eventos" class="section">
+    <h2 class="section-title">Próximos Eventos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Evento</th>
+          <th>Lugar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>26 de Mayo</td>
+          <td>Conferencia sobre salud mental</td>
+          <td>Centro Comunitario</td>
+        </tr>
+        <tr>
+          <td>29 de Junio</td>
+          <td>Campeonato de fútbol benéfico</td>
+          <td>Estadio Municipal</td>
+        </tr>
+        <tr>
+          <td>03 de Julio</td>
+          <td>Campaña de limpieza comunitaria</td>
+          <td>Parque Central</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="temas_de_interes" class="section full-width">
+    <h2 class="section-title">Temas de Interés</h2>
+    <p>Uno de los temas centrales para nuestra organización es el cambio climático. Nos dedicamos a concientizar a la comunidad sobre la importancia de tomar medidas para mitigar sus efectos y promover un estilo de vida más sostenible.</p>
+     
+    <!-- Galería de imágenes relacionadas con el cambio climático -->
+    <div class="image-gallery">
+      <img src="https://www.duna.cl/media/2023/01/cambio-climatico-causas-consecuencias-2.jpg" alt="Imagen sobre cambio climático">
+      <img src="https://www.ceroresiduo.com/wp-content/uploads/Portada-Dia-Internacional-contra-el-Cambio-Climatico-1024x512.jpg" alt="Otra imagen sobre cambio climático">
+      <img src="https://www.latercera.com/resizer/L7-pTul5hcSihQvxdGuQKinpc5o=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/CPENAWGZUFFIBH4M5Q6BU2ZRTY.png" alt="Otra imagen relacionada con el cambio climático">
+    </div>
+  </section>
+
+  <section id="videos_relacionados" class="section">
+    <h2 class="section-title">Videos Relacionados</h2>
+    <!-- Video relacionado con el cambio climático -->
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/OnoRdprqEr4" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="formulario-registro" class="section">
+    <h2 class="section-title">Registro de nuevos usuarios</h2>
+    <form action="/submit" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required>
+      <input type="submit" value="Registrarse">
+    </form>
+  </section>
+</main>
+
+<!-- Pie de página -->
+<footer>
+  <p>Derechos Reservados &copy; Organización Sin Fines de Lucro</p>
+</footer>
+
+</body>
+</html>
